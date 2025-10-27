@@ -5,10 +5,11 @@ title = "Marco Payr"
 [author]
 name = "Marco Payr"
 image = "img/me.jpg"
-headline = "PhD student @ EMBL Heidelberg.<br> Interested in sm-FRET, protein-RNA interactions, protein design.<br>Mail: firstname.lastname@C.de, where C = EMBL"
-bio = "PhD student @ EMBL Heidelberg.<br> Interested in sm-FRET and protein-RNA interactions."
+headline = "PhD student EMBL Heidelberg. Boehringer Ingelheim Fonds Alumnus <br> <br> Biochemist (Ph.D., EMBL) with an interdisciplinary background in chemistry. Hands-on expertise in expression, purification and design of recombinant, bioconjugated biomolecules (proteins, nanobodies, RNA). Proficient in design and development of analytical assays for protein characterization and passionate about working in interdisciplinary projects. <br><br> Mail: firstname.lastname@C.de, where C = EMBL"
+# headline = "PhD student @ EMBL Heidelberg.<br> Interested in sm-FRET, protein-RNA interactions, protein design.<br> <br> Mail: firstname.lastname@C.de, where C = EMBL"
+#bio = "PhD student @ EMBL Heidelberg.<br> Interested in sm-FRET and protein-RNA interactions."
 links = [
-  { twitter = "https://twitter.com/marcopayr" },
-  { linkedin = "https://www.linkedin.com/in/marco-payr-631854b7/"},
+  #{ twitter = "https://twitter.com/marcopayr" },
+  { linkedin = "https://www.linkedin.com/in/marco-payr-631854b7/"}
   #{ email = "mailto:marco.payr97@gmail.com"}
 ]
