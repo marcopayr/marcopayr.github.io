@@ -1,6 +1,8 @@
 ---
 title: "Education"
 draft: false
+summary: "Education and research training of Marco Payr, including EMBL Heidelberg and Technical University of Munich."
+description: "Overview of Marco Payr’s education and academic training: EMBL PhD, TUM Master’s, and research in biophysics and biochemistry."
 tags: ["education"]
 ---
 

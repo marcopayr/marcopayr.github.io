@@ -1,5 +1,8 @@
+---
 title: "Experience"
 draft: false
+summary: "Skills and experience of Marco Payr in programming, molecular biology, and biophysical methods."
+description: "Experience in single-molecule fluorescence, protein and RNA biochemistry, and scientific programming (Python, C++, MATLAB)."
 tags: ["experience"]
 
 showTableOfContents : false

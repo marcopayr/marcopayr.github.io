@@ -2,7 +2,8 @@
 title: "Publications"
 date: 
 draft: false
-summary:
+summary: "Publications by Marco Payr on sm-FRET, protein–RNA interactions, translation repression, and structural biochemistry."
+description: "Peer-reviewed papers and preprints by Marco Payr (EMBL Heidelberg): single-molecule FRET, RNA-binding proteins, and translational control."
 tags: ["publications"]
 ---
 

@@ -2,7 +2,8 @@
 title: "About Me"
 date: 
 draft: false
-summary:
+summary: "About Marco Payr — PhD student at EMBL Heidelberg researching single-molecule biophysics and protein–RNA interactions."
+description: "Learn more about Marco Payr, a PhD student at EMBL Heidelberg working on sm-FRET, RNA-binding proteins, and translation repression."
 tags: ["About Me"]
 
 showDate : false

@@ -9,6 +9,22 @@ colorScheme = "noir"
 defaultAppearance = "dark" # valid options: light or dark
 autoSwitchAppearance = true
 
+# Global SEO
+description = "Marco Payr — PhD student at EMBL Heidelberg. Research on single-molecule FRET (sm-FRET), protein–RNA interactions, translation repression, and protein design. Publications, CV, and contact information."
+keywords = [
+  "Marco Payr",
+  "EMBL",
+  "PhD",
+  "sm-FRET",
+  "single-molecule FRET",
+  "protein RNA interactions",
+  "translation repression",
+  "biochemistry",
+  "publications",
+  "CV"
+]
+images = ["https://marcopayr.github.io/img/me.jpg"]
+
 mainSection = ["CV", "Publications"]
 
 defaultBackgroundImage = "img/background.jpg"
