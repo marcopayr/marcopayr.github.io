@@ -6,6 +6,14 @@ summary:
 tags: ["publications"]
 ---
 
+## 2025
+
+<b>Payr, M.</b>, Meyer, J., Geissen, E.M., Hennig, J., Duss, O. Various complex assembly strategies improve translation repression efficiency. bioRxiv: <a href="https://doi.org/10.1101/2025.04.07.647595">DOI</a>; accepted in <em>Cell Reports</em>
+
+{{< button href="paper_3.pdf" target="_self" >}}
+{{< icon "download" >}}
+{{< /button >}}
+
 ## 2024
 
 Meyer, J.<sup>* </sup>, <b>Payr, M.<sup>* </sup></b>, Duss, O., Hennig, J. (2024) Exploring the dynamics of messenger ribonucleoprotein-mediated translation repression. Biochemical Society transactions, BST20231240.  *co-first

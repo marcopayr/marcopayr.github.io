@@ -1,0 +1,24 @@
+<script>
+  (function() {
+    function initZoom() {
+      if (window.mediumZoom) {
+        try {
+          window.mediumZoom(document.querySelectorAll('img:not(.nozoom)'), {
+            margin: 24,
+            background: 'rgba(0,0,0,0.5)',
+            scrollOffset: 0,
+          });
+        } catch (e) {
+          // swallow to avoid breaking page
+        }
+      }
+    }
+    if (document.readyState === 'complete' || document.readyState === 'interactive') {
+      setTimeout(initZoom, 0);
+    } else {
+      document.addEventListener('DOMContentLoaded', initZoom);
+    }
+    // Also re-run after full load as a fallback (e.g., layout scripts)
+    window.addEventListener('load', function(){ setTimeout(initZoom, 0); });
+  })();
+</script>

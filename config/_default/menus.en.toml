@@ -6,6 +6,11 @@
   weight = 10
 
 [[main]]
+  name = "Art Gallery"
+  pageRef = "/art_gallery"
+  weight = 20
+
+[[main]]
   name = "CV"
   #pageRef = "/Education & Interests" # this here is directory name and will also show identically on website
   weight = 30

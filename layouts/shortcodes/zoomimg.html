@@ -1,0 +1,51 @@
+{{/*
+  zoomimg shortcode
+  Usage:
+  {{< zoomimg src="gallery/cover_image_v4.jpg" alt="Description" class="grid-w50 md:grid-w5700 xl:grid-w6900" width="900" quality="82" >}}
+
+  Params:
+  - src: required, path to image relative to the page bundle (e.g., "gallery/foo.jpg")
+  - alt: optional, alt text
+  - class: optional, CSS classes to apply to <img>
+  - width: optional, thumbnail width (default 800)
+  - quality: optional, thumbnail quality (default 80)
+
+  Behavior:
+  - Renders a resized thumbnail for grid performance.
+  - Sets data-zoom-src to the original image for high-res zoom.
+  - Also emits a responsive srcset for sharper thumbnails on HiDPI displays.
+*/}}
+{{ $src := .Get "src" }}
+{{ $alt := .Get "alt" }}
+{{ $class := .Get "class" }}
+{{ $w := .Get "width" | default "800" }}
+{{ $q := .Get "quality" | default "80" }}
+
+{{ $img := .Page.Resources.GetMatch $src }}
+{{ if not $img }}
+  {{/* Fallback: render plain img if resource wasn't found (e.g., when using absolute/static paths) */}}
+  <img src="{{ $src }}" alt="{{ $alt }}" class="{{ $class }}" loading="lazy" />
+{{ else }}
+  {{/* Build a small responsive set for sharper grid thumbnails */}}
+  {{ $wInt := int $w }}
+  {{ $w1 := printf "%dx q%s" $wInt $q | $img.Resize }}
+  {{ $w2 := cond (ge $img.Width (mul $wInt 2)) ($img.Resize (printf "%dx q%s" (mul $wInt 2) $q)) nil }}
+  {{ $w3 := cond (ge $img.Width (mul $wInt 3)) ($img.Resize (printf "%dx q%s" (mul $wInt 3) $q)) nil }}
+
+  {{ $srcset := slice (printf "%s %dw" $w1.RelPermalink $w1.Width) }}
+  {{ if $w2 }}
+    {{ $srcset = $srcset | append (printf "%s %dw" $w2.RelPermalink $w2.Width) }}
+  {{ end }}
+  {{ if $w3 }}
+    {{ $srcset = $srcset | append (printf "%s %dw" $w3.RelPermalink $w3.Width) }}
+  {{ end }}
+  <img
+    src="{{ $w1.RelPermalink }}"
+    srcset="{{ delimit $srcset ", " }}"
+    sizes="(min-width: 1024px) 50vw, 100vw"
+    data-zoom-src="{{ $img.RelPermalink }}"
+    alt="{{ $alt }}"
+    class="{{ $class }}"
+    loading="lazy"
+  />
+{{ end }}
