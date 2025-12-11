@@ -1,1 +1,64 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Marco Payr</title><link>https://marcopayr.github.io/</link><description>Recent content on Marco Payr</description><generator>Hugo -- gohugo.io</generator><language>en</language><copyright>© 2025 Marco Payr</copyright><atom:link href="https://marcopayr.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title/><link>https://marcopayr.github.io/experience/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://marcopayr.github.io/experience/</guid><description>title: &amp;ldquo;Experience&amp;rdquo; draft: false tags: [&amp;ldquo;experience&amp;rdquo;]</description></item><item><title>About Me</title><link>https://marcopayr.github.io/contact/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://marcopayr.github.io/contact/</guid><description>I am a PhD student in the labs of Janosch Hennig and Olivier Duss at EMBL Heidelberg.</description></item><item><title>Art Gallery</title><link>https://marcopayr.github.io/art_gallery/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://marcopayr.github.io/art_gallery/</guid><description>Hi there!</description></item><item><title>Education</title><link>https://marcopayr.github.io/education/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://marcopayr.github.io/education/</guid><description>&lt;?</description></item><item><title>Publications</title><link>https://marcopayr.github.io/publications/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://marcopayr.github.io/publications/</guid><description>2025 # Payr, M.</description><media:content xmlns:media="http://search.yahoo.com/mrss/" url="https://marcopayr.github.io/publications/feature_about_me.jpg"/></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Marco Payr</title>
+    <link>http://localhost:1313/</link>
+    <description>Recent content on Marco Payr</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <copyright>© 2025 Marco Payr</copyright>
+    <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>About Me</title>
+      <link>http://localhost:1313/contact/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/contact/</guid>
+      <description>About Marco Payr — PhD student at EMBL Heidelberg researching single-molecule biophysics and protein–RNA interactions.</description>
+      
+    </item>
+    
+    <item>
+      <title>Art Gallery</title>
+      <link>http://localhost:1313/art_gallery/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/art_gallery/</guid>
+      <description>&lt;p&gt;Hi there! In my free time I enjoy making scientific art work, and this is my personal gallery — a space to share my creative work and experiments in 3D art and design. I use digital tools such as &lt;b&gt;Blender 3D&lt;/b&gt; to bring my ideas to life, from detailed models and animations to abstract visual explorations.
+Take a look around, explore my projects, and feel free to reach out if you’d like to collaborate or just talk art and 3D!&lt;/p&gt;</description>
+      
+    </item>
+    
+    <item>
+      <title>Education</title>
+      <link>http://localhost:1313/education/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/education/</guid>
+      <description>Education and research training of Marco Payr, including EMBL Heidelberg and Technical University of Munich.</description>
+      
+    </item>
+    
+    <item>
+      <title>Experience</title>
+      <link>http://localhost:1313/experience/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/experience/</guid>
+      <description>Skills and experience of Marco Payr in programming, molecular biology, and biophysical methods.</description>
+      
+    </item>
+    
+    <item>
+      <title>Publications</title>
+      <link>http://localhost:1313/publications/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/publications/</guid>
+      <description>Publications by Marco Payr on sm-FRET, protein–RNA interactions, translation repression, and structural biochemistry.</description>
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:1313/publications/feature_about_me.jpg" />
+    </item>
+    
+  </channel>
+</rss>

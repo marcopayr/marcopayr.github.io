@@ -1,5 +1,5 @@
 global:
-  language: "🇵🇹"
+  language: "PT-PT"
 
 article:
   anchor_label: "Etiqueta"
@@ -22,6 +22,14 @@ article:
   part: "Parte"
   this_article: "Este artigo"
   related_articles: "Relacionados"
+  reply_by_email: "Responder por email"
+
+a11y:
+  title: "Definições de acessibilidade"
+  disable_blur: "Desativar desfoque"
+  disable_images: "Desativar imagens"
+  show_link_underline: "Mostrar sublinhado de links"
+  font_size: "Tamanho da fonte"
 
 author:
   byline_title: "Autor"
@@ -31,14 +39,14 @@ code:
   copied: "Copiado"
 
 error:
-  404_title: "Página não econtrada :confused:"
+  404_title: "Página não encontrada :confused:"
   404_error: "Erro 404"
   404_description: "Aparentemente a página pretendida não existe."
 
 footer:
   dark_appearance: "Mudar para modo escuro"
   light_appearance: "Mudar para modo claro"
-  powered_by: "Movido por {{ .Hugo }} &amp; {{ .Theme }}"
+  powered_by: "Criado por {{ .Hugo }} &amp; {{ .Theme }}"
 
 list:
   externalurl_title: "Link para site externo"
@@ -56,13 +64,14 @@ search:
 sharing:
   email: "Partilhar por email"
   facebook: "Partilhar pelo Facebook"
+  line: "Partilhar pelo LINE"
   linkedin: "Partilhar pelo LinkedIn"
   pinterest: "Partilhar no Pinterest"
   reddit: "Partilhar no Reddit"
   twitter: "Partilhar no Twitter"
 
 shortcode:
-  recent_articles: "Recente"
+  recent_articles: "Recentes"
 
 recent:
   show_more: "Mostrar mais"

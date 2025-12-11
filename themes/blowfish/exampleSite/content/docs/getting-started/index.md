@@ -1,6 +1,6 @@
 ---
 title: "Getting Started"
-date: 2020-08-15
+weight: 3
 draft: false
 description: "All the front matter variables available in Blowfish."
 slug: "getting-started"
@@ -13,14 +13,22 @@ series_order: 3
 This section assumes you have already [installed the Blowfish theme]({{< ref "docs/installation" >}}).
 {{< /alert >}}
 
+</br>
+{{< alert "fire" >}}
+We just launched a CLI tool to help you get started with Blowfish. It will help you with installation and configuration. Install the CLI tool globally using:
+```bash
+npx blowfish-tools
+```
+{{< /alert >}}
+
 The config files that ship with Blowfish contain all of the possible settings that the theme recognises. By default, many of these are commented out but you can simply uncomment them to activate or change a specific feature.
 
 ## Basic configuration
 
-Before creating any content, there are a few things you should set for a new installation. Starting in the `config.toml` file, set the `baseURL` and `languageCode` parameters. The `languageCode` should be set to the main language that you will be using to author your content.
+Before creating any content, there are a few things you should set for a new installation. Starting in the `hugo.toml` file, set the `baseURL` and `languageCode` parameters. The `languageCode` should be set to the main language that you will be using to author your content.
 
 ```toml
-# config/_default/config.toml
+# config/_default/hugo.toml
 
 baseURL = "https://your_domain.com/"
 languageCode = "en"
@@ -31,7 +39,7 @@ The next step is to configure the language settings. Although Blowfish supports 
 Locate the `languages.en.toml` file in the config folder. If your main language is English you can use this file as is. Otherwise, rename it so that it includes the correct language code in the filename. For example, for French, rename the file to `languages.fr.toml`.
 
 {{< alert >}}
-Note that the language code in the language config filename should match the `languageCode` setting in `config.toml`.
+Note that the language code in the language config filename should match the `languageCode` setting in `hugo.toml`.
 {{< /alert >}}
 
 ```toml
@@ -39,7 +47,7 @@ Note that the language code in the language config filename should match the `la
 
 title = "My awesome website"
 
-[author]
+[params.author]
 name = "My name"
 image = "img/author.jpg"
 headline = "A generally awesome human"
@@ -49,13 +57,13 @@ links = [
 ]
 ```
 
-The `[author]` configuration determines how the author information is displayed on the website. The image should be placed in the site's `assets/` folder. Links will be displayed in the order they are listed.
+The `[params.author]` configuration determines how the author information is displayed on the website. The image should be placed in the site's `assets/` folder. Links will be displayed in the order they are listed.
 
 If you need extra detail, further information about each of these configuration options, is covered in the [Configuration]({{< ref "configuration" >}}) section.
 
 ## Colour schemes
 
-Blowfish ships with a number of colour schemes out of the box. To change the scheme, simply set the `colorScheme` theme parameter. Valid options are `blowfish` (default), `avocado`, `fire`, `ocean` and `slate`.
+Blowfish ships with a number of colour schemes out of the box. To change the scheme, simply set the `colorScheme` theme parameter. Valid options are `blowfish` (default), `avocado`, `fire`, `ocean`, `forest`, `princess`, `neon`, `bloody`, `terminal`, `marvel`, `noir`, `autumn`, `congo`, `slate`, `github` and `one-light`.
 
 ```toml
 # config/_default/params.toml
@@ -63,47 +71,71 @@ Blowfish ships with a number of colour schemes out of the box. To change the sch
 colorScheme = "blowfish"
 ```
 
-Blowfish defines a three-colour palette that is used throughout the theme. Each main colour contains ten shades which are based upon the colours that are included in [Tailwind](https://tailwindcss.com/docs/customizing-colors#color-palette-reference).
+Blowfish defines a three-colour palette that is used throughout the theme. Each main colour contains ten shades which are based upon the colours that are included in [Tailwind](https://tailwindcss.com/docs/customizing-colors#color-palette-reference). The three main colours are used for the header, footer, and accent colours. Here are the colors for each scheme:
 
-#### Blowfish (default)
+### Blowfish (default)
+
 {{< swatches "#64748b" "#3b82f6" "#06b6d4" >}}
 
-#### Avocado
+### Avocado
+
 {{< swatches "#78716c" "#84cc16" "#10b981" >}}
 
-#### Fire
+### Fire
+
 {{< swatches "#78716c" "#f97316" "#f43f5e" >}}
 
-#### Forest
+### Ocean
+
+{{< swatches "#64748b" "#3b82f6" "#06b6d4" >}}
+
+### Forest
+
 {{< swatches "#658c86" "#3bf5df" "#06d45c" >}}
 
-#### Princess
+### Princess
+
 {{< swatches "#8c658c" "#f53bf2" "#7706d4" >}}
 
-#### Neon
+### Neon
+
 {{< swatches "#8338ec" "#ff006e" "#3a86ff" >}}
 
-#### Bloody
+### Bloody
+
 {{< swatches "#d90429" "#8d99ae" "#457b9d" >}}
 
-#### Terminal
+### Terminal
+
 {{< swatches "#004b23" "#38b000" "#1a759f" >}}
 
-#### Marvel
+### Marvel
+
 {{< swatches "#2541b2" "#d81159" "#ffbc42" >}}
 
-#### Noir
+### Noir
+
 {{< swatches "#5c6b73" "#9db4c0" "#00a5cf" >}}
 
-#### Autumn
+### Autumn
+
 {{< swatches "#0a9396" "#ee9b00" "#bb3e03" >}}
 
-#### Congo
+### Congo
+
 {{< swatches "#71717a" "#8b5cf6" "#d946ef" >}}
 
-#### Slate
+### Slate
+
 {{< swatches "#6B7280" "#64748b" "#6B7280" >}}
 
+### Github
+
+{{< swatches "#64748b" "#0092ff" "#f54728" >}}
+
+### One-Light
+
+{{< swatches "#646464" "#0070cc" "#20a077" >}}
 
 Although these are the default schemes, you can also create your own. Refer to the [Advanced Customisation]({{< ref "advanced-customisation#colour-schemes" >}}) section for details.
 
@@ -249,7 +281,7 @@ The default `name` is the `pageRef` title cased.
 
 ## Thumbnails & Backgrounds
 
-Blowfish was built so it would be easy to add visual support to your articles. If your familiar with Hugo article strucutre, you just need to place an image file (almost all formats are supported bue we recommend `.png` or `.jpg`) that starts with `feature*` inside your article folder. And that's it, Blowfish will then able to both use the image as a thumbnail within your website as well as for <a target="_blank" href="https://oembed.com/">oEmbed</a> cards across social platforms. 
+Blowfish was built so it would be easy to add visual support to your articles. If your familiar with Hugo article structure, you just need to place an image file (almost all formats are supported but we recommend `.png` or `.jpg`) that starts with `feature*` inside your article folder. And that's it, Blowfish will then be able to both use the image as a thumbnail within your website as well as for <a target="_blank" href="https://oembed.com/">oEmbed</a> cards across social platforms.
 
 [Here]({{< ref "thumbnails" >}}) is also a guide with more info and a [sample]({{< ref "thumbnail_sample" >}}) if you want to see how you can do it.
 
